@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="input-text" id="input-label">Number of Cards</label>
+    <input id="aiden-likes-to-eat-dog-poop" ></input>
+    <div id="text-we-changing">
+      test
+    </div>
+    <script>
+       const numOfCardsInput = document.querySelector('#aiden-likes-to-eat-dog-poop');
+
+
+       function inputInputHandler(event){
+         const { value } = event.target;
+         const cards = [];
+        
+         const valueAsNumber = +value > 10 ? 10 : +value;
+
+        for (let numOfTimes = 1; numOfTimes <= valueAsNumber; numOfTimes++){
+          const cardName = 'royal guard ' + numOfTimes
+          cards.push(cardName);
+        }
+
+        console.log('cards', cards)
+        
+        
+
+      }
+
+      function NameOfIT(parameter1, parameter2){
+        
+      }
+
+       numOfCardsInput.addEventListener('click', )
+    
+       
+       
+    </script>
+  </body>
+</html>
