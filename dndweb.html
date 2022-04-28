@@ -23,13 +23,13 @@
     }
    
     ol {
-    border: 5px solid blue;
+    border: 5px solid orange;
     min-height: 540px; 
     width: 700px;
     }
 
     body {
-    background-color: rgb(13, 153, 209);
+    background-color: red
     }
     
     
@@ -88,6 +88,13 @@
 
       const newListItem = document.createElement("li");
       newListItem.textContent = damageType.value + " " + damageInput.value;
+      
+      if(damageList.lastChild !== null) {
+      damageList.lastChild.remove()
+
+      }
+      
+      console.log('damage', damageList);
 
       damageList.appendChild(newListItem);
       const deleteButton = document.createElement("button");
@@ -95,14 +102,27 @@
       deleteButton.textContent = "Delete";
 
       function deleteDamage() {
-        damageList.removeChild(newListItem);
-        damageList.removeChild(deleteButton);
+      damageList.removeChild(newListItem);
+      damageList.removeChild(deleteButton);
+
+      const deleteButton = document.createElement("button");
+      damageList.appendChild(deleteButton);
+      deleteButton.textContent = "Delete";
       }
 
       deleteButton.addEventListener("click", deleteDamage);
+      deleteButton.addEventListener("click", deleteDamage);
+
+      function deleteDelete() {
+      
+
+
+      }
     }
 
     damageButton.addEventListener("click", damageButtonClicker);
+
+
   </script>
 </body>
 
