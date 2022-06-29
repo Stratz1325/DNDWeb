@@ -40,7 +40,9 @@
       <div class="side-by-side">
         <label for="damage">Damage</label>
         <br />
-        <input id="damageBox" />
+        <input id="damageBox" 
+        type = "number"/>
+        
       </div>
 
       <div class="side-by-side">
@@ -108,15 +110,21 @@
         damageList.removeChild(previousDeleteButton);
 
         previousListItem = damageList.lastChild;
-
-        const deleteButton = document.createElement("button");
+        
+        
+        
+        if (damageList.childElementCount !== 0) { 
+          const deleteButton = document.createElement("button");
         damageList.appendChild(deleteButton);
         deleteButton.textContent = "Delete";
         previousDeleteButton = deleteButton;
-        deleteButton.addEventListener("click", deleteDamage);
+        deleteButton.addEventListener("click", deleteDamage);}
       }
+       
+      damageButton.addEventListener("click", damageButtonClicker)
+      
 
-      damageButton.addEventListener("click", damageButtonClicker);
+
     </script>
   </body>
 </html>
